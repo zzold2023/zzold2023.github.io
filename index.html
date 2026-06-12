@@ -4,8 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Проект интеграции 1С Документооборот ↔ 1С ЗУП</title>
-  //cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  >
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -65,199 +70,221 @@
       <div class="tree-card">
         <div class="d-none d-md-block">
           <div class="tree-wrap">
-            <ul class="treeee">
-              >
+            <ul class="tree">
+              <li>
                 <span>Проект интеграции «1С Документооборот ↔ 1С ЗУП»</span>
-                <u
                 <ul>
-                  ><span>1. Анализ бизнес-процесса и требований</span>
-                    <u
+                  <li>
+                    <span>1. Анализ бизнес-процесса и требований</span>
                     <ul>
-                      ><span>1.1 Аналитик</span>
-                        <u
+                      <li>
+                        <span>1.1 Аналитик</span>
                         <ul>
-                          ><span>Провести интервью с руководителями отделов и директорами департамента.</span></l/li>
-                          ><span>Создать BPMN-модель процесса согласования и передачи данных.</span></l/li>
-                          ><span>Согласовать перечень объектов обмена и бизнес-правила.</span></l/li>
-                          ><span>Подготовить требования к формам ввода и маршрутам согласования.</span></li>
+                          <li><span>Провести интервью с руководителями отделов и директорами департамента.</span></li>
+                          <li><span>Создать BPMN-модель процесса согласования и передачи данных.</span></li>
+                          <li><span>Согласовать перечень объектов обмена и бизнес-правила.</span></li>
+                          <li><span>Подготовить требования к формам ввода и маршрутам согласования.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>1.2 Технический архитектор 1С</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>1.2 Технический архитектор 1С</span>
                         <ul>
-                          ><span>Определить целевую архитектуру интеграции.</span></l/li>
-                          ><span>Выбрать формат обмена: REST или SOAP.</span></l/li>
-                          ><span>Определить схему безопасности, аутентификации и логирования.</span></l/li>
-                          ><span>Согласовать точки интеграции между Документооборотом и ЗУП.</span></li>
+                          <li><span>Определить целевую архитектуру интеграции.</span></li>
+                          <li><span>Выбрать формат обмена: REST или SOAP.</span></li>
+                          <li><span>Определить схему безопасности, аутентификации и логирования.</span></li>
+                          <li><span>Согласовать точки интеграции между Документооборотом и ЗУП.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>1.3 Разработчик</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>1.3 Разработчик</span>
                         <ul>
-                          ><span>Проанализировать конфигурации 1С Документооборот и 1С ЗУП на возможность расширения.</span></l/li>
-                          ><span>Оценить необходимые доработки объектов конфигурации.</span></l/li>
-                          ><span>Проверить ограничения платформы и обмена.</span></li>
+                          <li><span>Проанализировать конфигурации 1С Документооборот и 1С ЗУП на возможность расширения.</span></li>
+                          <li><span>Оценить необходимые доработки объектов конфигурации.</span></li>
+                          <li><span>Проверить ограничения платформы и обмена.</span></li>
                         </ul>
                       </li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>2. Разработка веб-сервиса для обмена данными</span>
-                    <u
+                  <li>
+                    <span>2. Разработка веб-сервиса для обмена данными</span>
                     <ul>
-                      ><span>2.1 Технический архитектор 1С</span>
-                        <u
+                      <li>
+                        <span>2.1 Технический архитектор 1С</span>
                         <ul>
-                          ><span>Согласовать архитектурную схему веб-сервиса.</span></l/li>
-                          ><span>Определить требования к отказоустойчивости и расширяемости.</span></l/li>
-                          ><span>Утвердить правила именования методов и контрактов.</span></l/li>
-                          ><span>Проверить соответствие решения требованиям безопасности.</span></li>
+                          <li><span>Согласовать архитектурную схему веб-сервиса.</span></li>
+                          <li><span>Определить требования к отказоустойчивости и расширяемости.</span></li>
+                          <li><span>Утвердить правила именования методов и контрактов.</span></li>
+                          <li><span>Проверить соответствие решения требованиям безопасности.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>2.2 Разработчик</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>2.2 Разработчик</span>
                         <ul>
-                          ><span>Реализовать метод PostData() для приёма данных из Документооборота.</span></l/li>
-                          ><span>Реализовать метод GetData() для передачи данных в ЗУП.</span></l/li>
-                          ><span>Настроить JWT-аутентификацию и логирование запросов.</span></l/li>
-                          ><span>Реализовать обработку ошибок и возврат статусов.</span></l/li>
-                          ><span>Подготовить тестовые эндпоинты для проверки обмена.</span></li>
+                          <li><span>Реализовать метод PostData() для приёма данных из Документооборота.</span></li>
+                          <li><span>Реализовать метод GetData() для передачи данных в ЗУП.</span></li>
+                          <li><span>Настроить JWT-аутентификацию и логирование запросов.</span></li>
+                          <li><span>Реализовать обработку ошибок и возврат статусов.</span></li>
+                          <li><span>Подготовить тестовые эндпоинты для проверки обмена.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>2.3 Аналитик</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>2.3 Аналитик</span>
                         <ul>
-                          ><span>Определить требования к безопасности и логированию.</span></l/li>
-                          ><span>Согласовать форматы передаваемых данных.</span></li>
+                          <li><span>Определить требования к безопасности и логированию.</span></li>
+                          <li><span>Согласовать форматы передаваемых данных.</span></li>
                         </ul>
                       </li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>3. Интеграция 1С Документооборот с веб-сервисом</span>
-                    <u
+                  <li>
+                    <span>3. Интеграция 1С Документооборот с веб-сервисом</span>
                     <ul>
-                      ><span>3.1 Разработчик</span>
-                        <u
+                      <li>
+                        <span>3.1 Разработчик</span>
                         <ul>
-                          ><span>Создать HTTP-обработчик в Документообороте для отправки данных.</span></l/li>
-                          ><span>Реализовать форму ввода данных для руководителя отдела.</span></l/li>
-                          ><span>Настроить событие «На согласование» для передачи директору.</span></l/li>
-                          ><span>Добавить контроль обязательных реквизитов перед отправкой.</span></li>
+                          <li><span>Создать HTTP-обработчик в Документообороте для отправки данных.</span></li>
+                          <li><span>Реализовать форму ввода данных для руководителя отдела.</span></li>
+                          <li><span>Настроить событие «На согласование» для передачи директору.</span></li>
+                          <li><span>Добавить контроль обязательных реквизитов перед отправкой.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>3.2 Аналитик</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>3.2 Аналитик</span>
                         <ul>
-                          ><span>Определить правила согласования и маршрут документооборота к директору департамента.</span></l/li>
-                          ><span>Зафиксировать требования к статусам документа.</span></li>
+                          <li><span>Определить правила согласования и маршрут документооборота к директору департамента.</span></li>
+                          <li><span>Зафиксировать требования к статусам документа.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>3.3 Технический архитектор 1С</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>3.3 Технический архитектор 1С</span>
                         <ul>
-                          ><span>Проверить соответствие реализации архитектурному решению.</span></l/li>
-                          ><span>Согласовать структуру сообщений и точки расширения.</span></li>
+                          <li><span>Проверить соответствие реализации архитектурному решению.</span></li>
+                          <li><span>Согласовать структуру сообщений и точки расширения.</span></li>
                         </ul>
                       </li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>4. Интеграция 1С ЗУП с веб-сервисом</span>
-                    <u
+                  <li>
+                    <span>4. Интеграция 1С ЗУП с веб-сервисом</span>
                     <ul>
-                      ><span>4.1 Разработчик</span>
-                        <u
+                      <li>
+                        <span>4.1 Разработчик</span>
                         <ul>
-                          ><span>Создать HTTP-обработчик в ЗУП для приёма данных.</span></l/li>
-                          ><span>Реализовать загрузку данных в регистры ЗУП.</span></l/li>
-                          ><span>Создать отчёт в ЗУП с фактическими данными расчёта.</span></l/li>
-                          ><span>Настроить проверку целостности и дубликатов.</span></li>
+                          <li><span>Создать HTTP-обработчик в ЗУП для приёма данных.</span></li>
+                          <li><span>Реализовать загрузку данных в регистры ЗУП.</span></li>
+                          <li><span>Создать отчёт в ЗУП с фактическими данными расчёта.</span></li>
+                          <li><span>Настроить проверку целостности и дубликатов.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>4.2 Аналитик</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>4.2 Аналитик</span>
                         <ul>
-                          ><span>Оформить спецификацию отчёта для руководителей и директоров.</span></l/li>
-                          ><span>Согласовать состав показателей для выгрузки.</span></li>
+                          <li><span>Оформить спецификацию отчёта для руководителей и директоров.</span></li>
+                          <li><span>Согласовать состав показателей для выгрузки.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>4.3 Технический архитектор 1С</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>4.3 Технический архитектор 1С</span>
                         <ul>
-                          ><span>Проверить корректность обмена с архитектурной точки зрения.</span></l/li>
-                          ><span>Утвердить правила трансформации и валидации данных.</span></li>
+                          <li><span>Проверить корректность обмена с архитектурной точки зрения.</span></li>
+                          <li><span>Утвердить правила трансформации и валидации данных.</span></li>
                         </ul>
                       </li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>5. Тестирование и доработка обмена</span>
-                    <u
+                  <li>
+                    <span>5. Тестирование и доработка обмена</span>
                     <ul>
-                      ><span>5.1 Аналитик</span>
-                        <u
+                      <li>
+                        <span>5.1 Аналитик</span>
                         <ul>
-                          ><span>Написать тестовые сценарии (входные данные, ожидаемый результат).</span></l/li>
-                          ><span>Подготовить критерии приемки.</span></li>
+                          <li><span>Написать тестовые сценарии (входные данные, ожидаемый результат).</span></li>
+                          <li><span>Подготовить критерии приемки.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>5.2 Разработчик</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>5.2 Разработчик</span>
                         <ul>
-                          ><span>Провести модульное тестирование веб-сервиса.</span></l/li>
-                          ><span>Провести интеграционное тестирование.</span></l/li>
-                          ><span>Исправить ошибки обмена.</span></l/li>
-                          ><span>Доработать логику повторной отправки при сбое.</span></li>
+                          <li><span>Провести модульное тестирование веб-сервиса.</span></li>
+                          <li><span>Провести интеграционное тестирование.</span></li>
+                          <li><span>Исправить ошибки обмена.</span></li>
+                          <li><span>Доработать логику повторной отправки при сбое.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>5.3 Контроль качества</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>5.3 Контроль качества</span>
                         <ul>
-                          ><span>Проверка корректности расчётов в ЗУП.</span></l/li>
-                          ><span>Проверка полноты и точности передаваемых данных.</span></li>
+                          <li><span>Проверка корректности расчётов в ЗУП.</span></li>
+                          <li><span>Проверка полноты и точности передаваемых данных.</span></li>
                         </ul>
-                      </l/li>
-                      ><span>5.4 Технический архитектор 1С</span>
-                        <u
+                      </li>
+                      <li>
+                        <span>5.4 Технический архитектор 1С</span>
                         <ul>
-                          ><span>Проверить соответствие итогового решения проектной архитектуре.</span></l/li>
-                          ><span>Подтвердить готовность к промышленной эксплуатации.</span></li>
+                          <li><span>Проверить соответствие итогового решения проектной архитектуре.</span></li>
+                          <li><span>Подтвердить готовность к промышленной эксплуатации.</span></li>
                         </ul>
                       </li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>6. Документирование и обучение пользователей</span>
-                    <u
+                  <li>
+                    <span>6. Документирование и обучение пользователей</span>
                     <ul>
-                      ><span>6.1 Разработчик</span>...</l/li>
-                      ><span>6.2 Аналитик</span>...</l/li>
-                      ><span>6.3 Технический архитектор 1С</span>...</l/li>
-                      ><span>6.4 Обучение</span>...</li>
+                      <li>
+                        <span>6.1 Разработчик</span>
+                        <ul>
+                          <li><span>Создать техническую документацию по веб-сервису.</span></li>
+                          <li><span>Описать методы обмена, параметры и ошибки.</span></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span>6.2 Аналитик</span>
+                        <ul>
+                          <li><span>Подготовить пользовательскую инструкцию для руководителей отделов.</span></li>
+                          <li><span>Подготовить инструкцию по контролю статусов и согласованию.</span></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span>6.3 Технический архитектор 1С</span>
+                        <ul>
+                          <li><span>Проверить полноту технической документации.</span></li>
+                          <li><span>Утвердить архитектурное описание внедрения.</span></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <span>6.4 Обучение</span>
+                        <ul>
+                          <li><span>Проведение тренингов для руководителей и директоров.</span></li>
+                        </ul>
+                      </li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>7. План реализации</span>
-                    <u
+                  <li>
+                    <span>7. План реализации</span>
                     <ul>
-                      ><span>7.1 Анализ и проектирование — 2 недели</span></l/li>
-                      ><span>7.2 Разработка веб-сервиса — 3 недели</span></l/li>
-                      ><span>7.3 Интеграция с 1С Документооборот — 4 недели</span></l/li>
-                      ><span>7.4 Интеграция с 1С ЗУП — 4 недели</span></l/li>
-                      ><span>7.5 Тестирование — 2 недели</span></l/li>
-                      ><span>7.6 Запуск и обучение — 1 неделя</span></li>
+                      <li><span>7.1 Анализ и проектирование — 2 недели</span></li>
+                      <li><span>7.2 Разработка веб-сервиса — 3 недели</span></li>
+                      <li><span>7.3 Интеграция с 1С Документооборот — 4 недели</span></li>
+                      <li><span>7.4 Интеграция с 1С ЗУП — 4 недели</span></li>
+                      <li><span>7.5 Тестирование — 2 недели</span></li>
+                      <li><span>7.6 Запуск и обучение — 1 неделя</span></li>
                     </ul>
-                  </l/li>
+                  </li>
 
-                  ><span>8. Ожидаемые результаты</span>
-                    <u
+                  <li>
+                    <span>8. Ожидаемые результаты</span>
                     <ul>
-                      ><span>8.1 Сокращение ручного ввода данных</span></l/li>
-                      ><span>8.2 Ускорение согласования между отделами</span></l/li>
-                      ><span>8.3 Единый источник фактических данных</span></l/li>
-                      ><span>8.4 Удобный отчёт для руководства</span></l/li>
-                      ><span>8.5 Снижение ошибок при передаче информации</span></li>
+                      <li><span>8.1 Сокращение ручного ввода данных</span></li>
+                      <li><span>8.2 Ускорение согласования между отделами</span></li>
+                      <li><span>8.3 Единый источник фактических данных</span></li>
+                      <li><span>8.4 Удобный отчёт для руководства</span></li>
+                      <li><span>8.5 Снижение ошибок при передаче информации</span></li>
                     </ul>
                   </li>
                 </ul>
@@ -272,7 +299,13 @@
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">1. Анализ бизнес-процесса и требований</button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>><strong>1.1 Аналитик</strong>...</li>><strong>1.2 Технический архитектор 1С</strong>...</li>><strong>1.3 Разработчик</strong>...</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li><strong>1.1 Аналитик</strong>...</li>
+                  <li><strong>1.2 Технический архитектор 1С</strong>...</li>
+                  <li><strong>1.3 Разработчик</strong>...</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -281,7 +314,13 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">2. Разработка веб-сервиса для обмена данными</button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>><strong>2.1 Технический архитектор 1С</strong>...</li>><strong>2.2 Разработчик</strong>...</li>><strong>2.3 Аналитик</strong>...</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li><strong>2.1 Технический архитектор 1С</strong>...</li>
+                  <li><strong>2.2 Разработчик</strong>...</li>
+                  <li><strong>2.3 Аналитик</strong>...</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -290,7 +329,13 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">3. Интеграция 1С Документооборот с веб-сервисом</button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>><strong>3.1 Разработчик</strong>...</li>><strong>3.2 Аналитик</strong>...</li>><strong>3.3 Технический архитектор 1С</strong>...</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li><strong>3.1 Разработчик</strong>...</li>
+                  <li><strong>3.2 Аналитик</strong>...</li>
+                  <li><strong>3.3 Технический архитектор 1С</strong>...</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -299,7 +344,13 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">4. Интеграция 1С ЗУП с веб-сервисом</button>
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>><strong>4.1 Разработчик</strong>...</li>><strong>4.2 Аналитик</strong>...</li>><strong>4.3 Технический архитектор 1С</strong>...</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li><strong>4.1 Разработчик</strong>...</li>
+                  <li><strong>4.2 Аналитик</strong>...</li>
+                  <li><strong>4.3 Технический архитектор 1С</strong>...</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -308,7 +359,14 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false">5. Тестирование и доработка обмена</button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>><strong>5.1 Аналитик</strong>...</li>><strong>5.2 Разработчик</strong>...</li>><strong>5.3 Контроль качества</strong>...</li>><strong>5.4 Технический архитектор 1С</strong>...</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li><strong>5.1 Аналитик</strong>...</li>
+                  <li><strong>5.2 Разработчик</strong>...</li>
+                  <li><strong>5.3 Контроль качества</strong>...</li>
+                  <li><strong>5.4 Технический архитектор 1С</strong>...</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -317,7 +375,14 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false">6. Документирование и обучение пользователей</button>
             </h2>
             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>><strong>6.1 Разработчик</strong>...</li>><strong>6.2 Аналитик</strong>...</li>><strong>6.3 Технический архитектор 1С</strong>...</li>><strong>6.4 Обучение</strong>...</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li><strong>6.1 Разработчик</strong>...</li>
+                  <li><strong>6.2 Аналитик</strong>...</li>
+                  <li><strong>6.3 Технический архитектор 1С</strong>...</li>
+                  <li><strong>6.4 Обучение</strong>...</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -326,7 +391,16 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false">7. План реализации</button>
             </h2>
             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>>7.1 Анализ и проектирование — 2 недели</li>>7.2 Разработка веб-сервиса — 3 недели</li>>7.3 Интеграция с 1С Документооборот — 4 недели</li>>7.4 Интеграция с 1С ЗУП — 4 недели</li>>7.5 Тестирование — 2 недели</li>>7.6 Запуск и обучение — 1 неделя</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li>7.1 Анализ и проектирование — 2 недели</li>
+                  <li>7.2 Разработка веб-сервиса — 3 недели</li>
+                  <li>7.3 Интеграция с 1С Документооборот — 4 недели</li>
+                  <li>7.4 Интеграция с 1С ЗУП — 4 недели</li>
+                  <li>7.5 Тестирование — 2 недели</li>
+                  <li>7.6 Запуск и обучение — 1 неделя</li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -335,7 +409,15 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false">8. Ожидаемые результаты</button>
             </h2>
             <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#treeAccordion">
-              <div class="accordion-body"><ul>>8.1 Сокращение ручного ввода данных</li>>8.2 Ускорение согласования между отделами</li>>8.3 Единый источник фактических данных</li>>8.4 Удобный отчёт для руководства</li>>8.5 Снижение ошибок при передаче информации</li></ul></div>
+              <div class="accordion-body">
+                <ul>
+                  <li>8.1 Сокращение ручного ввода данных</li>
+                  <li>8.2 Ускорение согласования между отделами</li>
+                  <li>8.3 Единый источник фактических данных</li>
+                  <li>8.4 Удобный отчёт для руководства</li>
+                  <li>8.5 Снижение ошибок при передаче информации</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -350,9 +432,18 @@
         <p>Краткая дорожная карта проекта в карточном виде.</p>
       </div>
       <div class="cards-grid">
-        <div class="info-card"><h3>Проектирование</h3><p>Анализ процессов, требований и архитектуры.</p></div>
-        <div class="info-card"><h3>Разработка</h3><p>Веб-сервис, обработчики и обмен данными.</p></div>
-        <div class="info-card"><h3>Тестирование</h3><p>Проверка обмена, ошибок и целостности.</p></div>
+        <div class="info-card">
+          <h3>Проектирование</h3>
+          <p>Анализ процессов, требований и архитектуры.</p>
+        </div>
+        <div class="info-card">
+          <h3>Разработка</h3>
+          <p>Веб-сервис, обработчики и обмен данными.</p>
+        </div>
+        <div class="info-card">
+          <h3>Тестирование</h3>
+          <p>Проверка обмена, ошибок и целостности.</p>
+        </div>
       </div>
     </div>
   </section>
