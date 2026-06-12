@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GitHub-style Bootstrap 5</title>
-
+  <title>ПРОЕКТ ИНТЕГРАЦИИ — 1С Документооборот ↔ 1С ЗУП</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,11 +11,11 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark app-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
-        <span class="brand-mark">G</span>
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#slide-1">
+        <span class="brand-mark">1C</span>
         <span>
-          <span class="d-block lh-1">GitHub-style</span>
-          <small class="text-white-50">Bootstrap 5</small>
+          <span class="d-block lh-1">Интеграция</span>
+          <small class="text-white-50">Документооборот ↔ ЗУП</small>
         </span>
       </a>
 
@@ -26,11 +25,16 @@
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
-        <div class="navbar-nav ms-auto gap-lg-3">
-          <a class="nav-link" href="#slide-1">Главная</a>
-          <a class="nav-link" href="#slide-2">Раздел 2</a>
-          <a class="nav-link" href="#slide-3">Раздел 3</a>
-          <a class="nav-link" href="#slide-4">Раздел 4</a>
+        <div class="navbar-nav ms-auto gap-lg-2">
+          <a class="nav-link" href="#slide-1">Титул</a>
+          <a class="nav-link" href="#slide-2">Описание</a>
+          <a class="nav-link" href="#slide-3">Процесс</a>
+          <a class="nav-link" href="#slide-4">Архитектура</a>
+          <a class="nav-link" href="#slide-5">Структура</a>
+          <a class="nav-link" href="#slide-6">Задачи</a>
+          <a class="nav-link" href="#slide-7">План</a>
+          <a class="nav-link" href="#slide-8">Результаты</a>
+          <a class="nav-link" href="#slide-9">Финал</a>
         </div>
       </div>
     </div>
@@ -41,34 +45,19 @@
       <div class="container h-100 d-flex flex-column justify-content-center">
         <div class="card app-card app-card-hero shadow-sm overflow-hidden">
           <div class="hero-topbar"></div>
-          <div class="row g-0">
-            <div class="col-lg-8">
-              <div class="p-4 p-lg-5">
-                <span class="badge rounded-pill app-badge mb-3">GitHub-like UI</span>
-                <h1 class="display-5 fw-bold mb-3">Первая страница занимает весь экран</h1>
-                <p class="lead text-secondary mb-0">
-                  Bootstrap 5 отвечает за сетку и адаптивность, а кастомные стили — за оформление в стиле GitHub.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 border-start border-1 app-panel">
-              <div class="p-4 p-lg-5 h-100 d-flex flex-column justify-content-center gap-3">
-                <div class="app-info">
-                  <div class="app-label">Ширина</div>
-                  <div class="fw-semibold">100% на всех устройствах</div>
-                </div>
-                <div class="app-info">
-                  <div class="app-label">Высота</div>
-                  <div class="fw-semibold">100dvh / 100svh</div>
-                </div>
-              </div>
-            </div>
+          <div class="card-body p-4 p-lg-5 text-center">
+            <div class="mb-3"><span class="badge rounded-pill app-badge">Проект интеграции</span></div>
+            <h1 class="display-6 fw-bold mb-3">ПРОЕКТ ИНТЕГРАЦИИ</h1>
+            <h2 class="h2 fw-bold mb-3">1С Документооборот ↔ 1С ЗУП</h2>
+            <p class="lead text-secondary mb-4">Отправка и получение данных через веб-сервис</p>
+            <p class="mx-auto text-secondary mb-0" style="max-width: 900px;">
+              Цель проекта: автоматизировать передачу данных между 1С Документооборот и 1С ЗУП, чтобы руководители отделов, директоры департаментов, ответственный сотрудник и бухгалтерия работали с едиными и актуальными данными.
+            </p>
           </div>
         </div>
-
         <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-3">
-          <a class="btn app-btn-primary" href="#slide-2">Следующая</a>
-          <a class="btn app-btn-secondary" href="#slide-4">К последней</a>
+          <a class="btn app-btn-primary" href="#slide-2">Начать</a>
+          <a class="btn app-btn-secondary" href="#slide-9">К финалу</a>
         </div>
       </div>
     </section>
@@ -77,41 +66,33 @@
       <div class="container h-100 d-flex flex-column justify-content-center">
         <div class="card app-card shadow-sm">
           <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">Раздел</span>
-            <h2 class="h1 fw-bold mb-3">Карточки и сетка Bootstrap</h2>
-            <p class="text-secondary mb-4">
-              Здесь Bootstrap 5 делает адаптивную сетку, а CSS задаёт цвета, границы и скругления в стиле GitHub.
-            </p>
-
+            <span class="badge rounded-pill app-badge mb-3">1. Краткое описание</span>
             <div class="row g-3">
-              <div class="col-md-6 col-lg-4">
-                <div class="card h-100 app-mini-card">
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
                   <div class="card-body">
-                    <h3 class="h5 fw-bold">Карточка 1</h3>
-                    <p class="text-secondary mb-0">Обычный блок с мягкой тенью и светлой рамкой.</p>
+                    <h3 class="h5 fw-bold">Роли</h3>
+                    <ul class="mb-0 app-list-simple">
+                      <li>Руководители отделов вносят данные по сотрудникам.</li>
+                      <li>Директоры департамента собирают и согласуют данные от отделов.</li>
+                      <li>Ответственный сотрудник загружает данные в 1С ЗУП.</li>
+                      <li>Бухгалтерия использует данные для расчётов.</li>
+                      <li>Руководство получает отчёт с фактическими данными.</li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card h-100 app-mini-card">
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
                   <div class="card-body">
-                    <h3 class="h5 fw-bold">Карточка 2</h3>
-                    <p class="text-secondary mb-0">Bootstrap колонки автоматически перестраиваются на мобильных.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-4">
-                <div class="card h-100 app-mini-card">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Карточка 3</h3>
-                    <p class="text-secondary mb-0">На маленьком экране блоки идут в один столбец.</p>
+                    <h3 class="h5 fw-bold">Смысл</h3>
+                    <p class="text-secondary mb-0">Единые данные, меньше ручных операций и меньше ошибок при передаче между системами.</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="mt-4 d-flex flex-column flex-md-row gap-3">
-              <a class="btn app-btn-primary" href="#slide-3">Дальше</a>
+            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-3">Далее</a>
               <a class="btn app-btn-secondary" href="#slide-1">Назад</a>
             </div>
           </div>
@@ -123,36 +104,18 @@
       <div class="container h-100 d-flex flex-column justify-content-center">
         <div class="card app-card shadow-sm">
           <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">Список</span>
-            <h2 class="h1 fw-bold mb-3">Структура страницы</h2>
-
-            <ul class="list-group app-list mb-4">
-              <li class="list-group-item">Bootstrap 5 подключён через CDN.</li>
-              <li class="list-group-item">Каждая секция занимает весь экран.</li>
-              <li class="list-group-item">GitHub-палитра добавлена через кастомный CSS.</li>
-            </ul>
-
-            <div class="row g-3">
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Сетка</h3>
-                    <p class="text-secondary mb-0">Используются container, row и col-*. Это стандартный путь Bootstrap.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Компоненты</h3>
-                    <p class="text-secondary mb-0">Navbar, card, badge, button и list-group уже встроены.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-4 d-flex flex-column flex-md-row gap-3">
-              <a class="btn app-btn-primary" href="#slide-4">Следующая</a>
+            <span class="badge rounded-pill app-badge mb-3">2. Бизнес-процесс</span>
+            <ol class="list-group list-group-numbered app-list mb-4">
+              <li class="list-group-item">Руководитель отдела вводит данные по сотруднику в форму 1С Документооборот.</li>
+              <li class="list-group-item">Данные передаются на согласование директору департамента.</li>
+              <li class="list-group-item">Директор департамента собирает информацию от всех подчинённых отделов.</li>
+              <li class="list-group-item">Ответственный сотрудник получает сведения от директоров департаментов.</li>
+              <li class="list-group-item">Ответственный сотрудник заносит данные в 1С ЗУП.</li>
+              <li class="list-group-item">После этого данные передаются в бухгалтерию.</li>
+              <li class="list-group-item">Руководители и директоры могут запросить отчёт с фактическими данными.</li>
+            </ol>
+            <div class="d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-4">Далее</a>
               <a class="btn app-btn-secondary" href="#slide-2">Назад</a>
             </div>
           </div>
@@ -164,16 +127,185 @@
       <div class="container h-100 d-flex flex-column justify-content-center">
         <div class="card app-card shadow-sm">
           <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">Итог</span>
-            <h2 class="h1 fw-bold mb-3">Готово</h2>
-            <p class="text-secondary mb-0">
-              Этот вариант уже работает на Bootstrap 5, выглядит ближе к GitHub и сохраняет полноэкранные секции.
-            </p>
+            <span class="badge rounded-pill app-badge mb-3">3. Архитектура решения</span>
+            <p class="lead text-secondary mb-4">Схема обмена: 1С Документооборот → Веб-сервис → 1С ЗУП</p>
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
+                  <div class="card-body">
+                    <h3 class="h5 fw-bold">Компоненты</h3>
+                    <ul class="mb-0 app-list-simple">
+                      <li>Веб-сервис принимает и отдаёт данные между конфигурациями.</li>
+                      <li>Аутентификация выполняется через JWT или другой защищённый механизм.</li>
+                      <li>В Документообороте реализуется форма ввода и отправка данных.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
+                  <div class="card-body">
+                    <h3 class="h5 fw-bold">Контроль</h3>
+                    <ul class="mb-0 app-list-simple">
+                      <li>В ЗУП реализуется приём данных, загрузка в регистры и отчётность.</li>
+                      <li>Все запросы логируются для контроля и отладки.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-5">Далее</a>
+              <a class="btn app-btn-secondary" href="#slide-3">Назад</a>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section id="slide-5" class="slide py-3">
+      <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="card app-card shadow-sm">
+          <div class="card-body p-4 p-lg-5">
+            <span class="badge rounded-pill app-badge mb-3">4. Структура проекта</span>
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
+                  <div class="card-body">
+                    <h3 class="h5 fw-bold">Уровень 1</h3>
+                    <ol class="mb-0 app-list-simple">
+                      <li>Анализ бизнес-процесса и требований</li>
+                      <li>Разработка веб-сервиса</li>
+                      <li>Интеграция Документооборота</li>
+                      <li>Интеграция ЗУП</li>
+                      <li>Тестирование и доработка</li>
+                      <li>Документирование и обучение</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
+                  <div class="card-body">
+                    <h3 class="h5 fw-bold">Уровень 2</h3>
+                    <ul class="mb-0 app-list-simple">
+                      <li>Сбор и согласование требований</li>
+                      <li>Проектирование обмена данными</li>
+                      <li>Настройка маршрутов согласования</li>
+                      <li>Проверка качества обмена</li>
+                      <li>Подготовка документации</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-6">Далее</a>
+              <a class="btn app-btn-secondary" href="#slide-4">Назад</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-6" class="slide py-3">
+      <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="card app-card shadow-sm">
+          <div class="card-body p-4 p-lg-5">
+            <span class="badge rounded-pill app-badge mb-3">5. Задачи аналитика и разработчика</span>
+            <div class="row g-3">
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
+                  <div class="card-body">
+                    <h3 class="h5 fw-bold">Аналитик</h3>
+                    <ul class="mb-0 app-list-simple">
+                      <li>Собрать требования от руководителей и директоров.</li>
+                      <li>Описать маршрут согласования.</li>
+                      <li>Подготовить тестовые сценарии.</li>
+                      <li>Сделать пользовательские инструкции.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card app-mini-card h-100">
+                  <div class="card-body">
+                    <h3 class="h5 fw-bold">Разработчик</h3>
+                    <ul class="mb-0 app-list-simple">
+                      <li>Реализовать веб-сервис.</li>
+                      <li>Создать HTTP-обработчики.</li>
+                      <li>Настроить передачу и приём данных.</li>
+                      <li>Сделать отчёт в 1С ЗУП.</li>
+                      <li>Провести интеграционное тестирование.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-7">Далее</a>
+              <a class="btn app-btn-secondary" href="#slide-5">Назад</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-7" class="slide py-3">
+      <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="card app-card shadow-sm">
+          <div class="card-body p-4 p-lg-5">
+            <span class="badge rounded-pill app-badge mb-3">6. План реализации</span>
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 1</h3><p class="text-secondary mb-0">Анализ и проектирование: 2 недели.</p></div></div></div>
+              <div class="col-md-6 col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 2</h3><p class="text-secondary mb-0">Разработка веб-сервиса: 3 недели.</p></div></div></div>
+              <div class="col-md-6 col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 3</h3><p class="text-secondary mb-0">Интеграция с 1С: 4 недели.</p></div></div></div>
+              <div class="col-md-6 col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 4</h3><p class="text-secondary mb-0">Тестирование: 2 недели.</p></div></div></div>
+              <div class="col-md-6 col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 5</h3><p class="text-secondary mb-0">Запуск и обучение: 1 неделя.</p></div></div></div>
+            </div>
+            <div class="mt-4"><div class="alert alert-info mb-0 app-alert">Общая длительность проекта: 12 недель.</div></div>
+            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-8">Далее</a>
+              <a class="btn app-btn-secondary" href="#slide-6">Назад</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-8" class="slide py-3">
+      <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="card app-card shadow-sm">
+          <div class="card-body p-4 p-lg-5">
+            <span class="badge rounded-pill app-badge mb-3">7. Ожидаемые результаты</span>
+            <div class="row g-3">
+              <div class="col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 1</h3><p class="text-secondary mb-0">Сокращение ручного ввода данных.</p></div></div></div>
+              <div class="col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 2</h3><p class="text-secondary mb-0">Ускорение согласования между отделами.</p></div></div></div>
+              <div class="col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 3</h3><p class="text-secondary mb-0">Единый источник фактических данных.</p></div></div></div>
+              <div class="col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 4</h3><p class="text-secondary mb-0">Удобный отчёт для руководства.</p></div></div></div>
+              <div class="col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 5</h3><p class="text-secondary mb-0">Снижение ошибок при передаче информации.</p></div></div></div>
+            </div>
+            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
+              <a class="btn app-btn-primary" href="#slide-9">Финал</a>
+              <a class="btn app-btn-secondary" href="#slide-7">Назад</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="slide-9" class="slide py-3">
+      <div class="container h-100 d-flex flex-column justify-content-center">
+        <div class="card app-card app-card-hero shadow-sm overflow-hidden text-center">
+          <div class="hero-topbar"></div>
+          <div class="card-body p-4 p-lg-5">
+            <h2 class="display-6 fw-bold mb-3">Спасибо за внимание!</h2>
+            <p class="text-secondary mb-2">Проект: 1С Документооборот ↔ 1С ЗУП через веб-сервис.</p>
+            <p class="text-secondary mb-0">Подходит для показа руководству и команде разработки.</p>
+          </div>
+        </div>
         <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-3">
-          <a class="btn app-btn-secondary" href="#slide-3">Назад</a>
+          <a class="btn app-btn-secondary" href="#slide-8">Назад</a>
           <a class="btn app-btn-primary" href="#slide-1">В начало</a>
         </div>
       </div>
