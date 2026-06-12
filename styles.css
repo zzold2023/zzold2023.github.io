@@ -17,8 +17,6 @@ body{
   align-items:center;
   padding:3rem 0 5rem;
   position:relative;
-  page-break-after:always;
-  break-after:page;
 }
 .slide-card{
   background:var(--card-bg);
@@ -27,10 +25,6 @@ body{
   box-shadow:0 .75rem 2rem rgba(0,0,0,.08);
   overflow:hidden;
 }
-.hero-topbar{
-  height:10px;
-  background:linear-gradient(90deg,#0d6efd 0 33.33%,#6610f2 33.33% 66.66%,#20c997 66.66% 100%);
-}
 .eyebrow{
   letter-spacing:.12em;
   text-transform:uppercase;
@@ -38,36 +32,11 @@ body{
   font-weight:700;
   color:var(--blue);
 }
-.hero-title{
-  font-size:clamp(2.25rem,4.5vw,4.5rem);
-  line-height:1.02;
-  letter-spacing:-.04em;
-  font-weight:800;
-}
 .section-title{
   font-size:clamp(1.6rem,2.5vw,2.4rem);
   letter-spacing:-.03em;
   font-weight:800;
   margin-bottom:1rem;
-}
-.soft{color:var(--muted)}
-.hero-panel{
-  border-left:1px solid var(--line);
-  background:#fbfbfc;
-}
-.info-item{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:1rem;
-  padding:1rem 1.1rem;
-}
-.info-label{
-  font-size:.76rem;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--muted);
-  margin-bottom:.35rem;
-  font-weight:700;
 }
 .tree-wrap{
   background:#fff;
@@ -122,51 +91,12 @@ body{
   background:#fff;
   font-weight:500;
 }
-.phase{
-  display:flex;
-  align-items:center;
-  gap:.85rem;
-  padding:1rem 1.1rem;
-  border:1px solid var(--line);
-  border-radius:1rem;
-  background:#fff;
-  margin-bottom:.85rem;
-  box-shadow:0 .35rem 1rem rgba(0,0,0,.03);
-}
-.phase::before{
-  content:"";
-  width:.7rem;
-  height:.7rem;
-  border-radius:50%;
-  background:var(--blue);
-  flex:0 0 auto;
-}
-.summary{
-  background:linear-gradient(90deg,#0d6efd,#6610f2);
-  color:#fff;
-  border-radius:1rem;
-  padding:1rem 1.1rem;
+.accordion-button{
   font-weight:700;
-  text-align:center;
 }
-.nav-pager{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:1.25rem;
-  pointer-events:none;
+.accordion-body ul{
+  padding-left:1.1rem;
 }
-.nav-pager .btn{pointer-events:auto}
-.card-list li{margin-bottom:.5rem}
-.lead-compact{
-  max-width:62rem;
-  color:#495057;
-  font-size:1.08rem;
-}
-@media (max-width: 991.98px){
-  .hero-panel{border-left:0;border-top:1px solid var(--line)}
-}
-@media print{
-  .slide{page-break-after:always;break-after:page}
-  .nav-pager{display:none}
+.accordion-body li{
+  margin-bottom:.5rem;
 }
