@@ -1,317 +1,716 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ПРОЕКТ ИНТЕГРАЦИИ — 1С Документооборот ↔ 1С ЗУП</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект интеграции 1С Документооборот ↔ 1С ЗУП</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .hero {
+            background: linear-gradient(135deg, #ffc107 0%, #ffda44 100%);
+            color: #111;
+            border-radius: 1.25rem;
+        }
+        .section-title {
+            border-left: 6px solid #ffc107;
+            padding-left: 1rem;
+        }
+        .tree-wrap {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 1rem;
+            padding: 1.25rem;
+            overflow-x: auto;
+        }
+        .tree, .tree ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .tree > li > span {
+            background: #ffc107;
+            color: #111;
+            border: 1px solid #ffc107;
+        }
+        .tree span {
+            display: inline-block;
+            padding: .6rem .85rem;
+            border-radius: .75rem;
+            background: #fff;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 .125rem .5rem rgba(0,0,0,.05);
+            font-weight: 600;
+        }
+        .tree li {
+            position: relative;
+            padding: .4rem 0 .4rem 1rem;
+            margin-left: 1rem;
+        }
+        .tree ul {
+            margin-left: 1.25rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ffc107;
+        }
+        .tree li::before {
+            content: "";
+            position: absolute;
+            left: -2px;
+            top: 1.2rem;
+            width: 1rem;
+            height: 2px;
+            background: #ffc107;
+        }
+        .tree > li::before {
+            display: none;
+        }
+        .muted-small {
+            color: #6c757d;
+            font-size: .95rem;
+        }
+    </style>
 </head>
-<body class="app-body">
+<body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark app-navbar sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#slide-1">
-        <span class="brand-mark">1C</span>
-        <span>
-          <span class="d-block lh-1">Интеграция</span>
-          <small class="text-white-50">Документооборот ↔ ЗУП</small>
-        </span>
-      </a>
+    <div class="container py-4 py-md-5">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Переключить навигацию">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="mainNav">
-        <div class="navbar-nav ms-auto gap-lg-2">
-          <a class="nav-link" href="#slide-1">Титул</a>
-          <a class="nav-link" href="#slide-2">Описание</a>
-          <a class="nav-link" href="#slide-3">Процесс</a>
-          <a class="nav-link" href="#slide-4">Архитектура</a>
-          <a class="nav-link" href="#slide-5">Структура</a>
-          <a class="nav-link" href="#slide-6">Задачи</a>
-          <a class="nav-link" href="#slide-7">План</a>
-          <a class="nav-link" href="#slide-8">Результаты</a>
-          <a class="nav-link" href="#slide-9">Финал</a>
+        <div class="hero p-4 p-md-5 shadow-sm mb-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <span class="badge text-bg-dark mb-3">Проект интеграции</span>
+                    <h1 class="display-5 fw-bold mb-3">1С Документооборот ↔ 1С ЗУП</h1>
+                    <p class="lead mb-0">
+                        Отправка и получение данных через веб-сервис. Структура проекта оформлена как современная презентация в стиле Bootstrap.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="bg-white rounded-4 p-3 shadow-sm d-inline-block">
+                        <div class="fw-semibold">Формат</div>
+                        <div class="text-secondary">Bootstrap 5</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4 p-md-4">
+                <h2 class="h4 fw-bold section-title mb-3">Цель проекта</h2>
+                <p class="mb-0">
+                    Автоматизировать передачу данных между 1С Документооборот и 1С ЗУП, чтобы руководители отделов, директоры департаментов, ответственный сотрудник и бухгалтерия работали с едиными и актуальными данными.
+                </p>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <h2 class="h4 fw-bold section-title mb-4">Уровень 1: Объекты / группы задач</h2>
+                <div class="row g-3">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold">Анализ</h3>
+                                <p class="mb-0">Анализ бизнес-процесса и требований.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold">Разработка</h3>
+                                <p class="mb-0">Разработка веб-сервиса для обмена данными.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold">Интеграция</h3>
+                                <p class="mb-0">Интеграция 1С Документооборот и 1С ЗУП.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold">Тестирование</h3>
+                                <p class="mb-0">Тестирование и доработка обмена.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold">Документация</h3>
+                                <p class="mb-0">Документирование и обучение пользователей.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <h2 class="h4 fw-bold section-title mb-4">Уровень 2: Действия по ролям</h2>
+
+                <div class="accordion" id="actionsAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                                1. Анализ бизнес-процесса и требований
+                            </button>
+                        </h2>
+                        <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#actionsAccordion">
+                            <div class="accordion-body">
+                                <ul class="mb-0">
+                                    <li>Сбор требований от руководителей отделов и директоров департамента</li>
+                                    <li>Моделирование потоков документов и данных</li>
+                                    <li>Формирование спецификации обмена (форматы, частота, ошибки)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                                2. Разработка веб-сервиса для обмена данными
+                            </button>
+                        </h2>
+                        <div id="a2" class="accordion-collapse collapse" data-bs-parent="#actionsAccordion">
+                            <div class="accordion-body">
+                                <ul class="mb-0">
+                                    <li>Архитектура веб-сервиса (REST/SOAP, безопасность, логирование)</li>
+                                    <li>Реализация методов приёма/передачи данных</li>
+                                    <li>Настройка аутентификации и токенов доступа</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                                3. Интеграция 1С Документооборот с веб-сервисом
+                            </button>
+                        </h2>
+                        <div id="a3" class="accordion-collapse collapse" data-bs-parent="#actionsAccordion">
+                            <div class="accordion-body">
+                                <ul class="mb-0">
+                                    <li>Разработка клиентского кода в Документообороте для отправки данных</li>
+                                    <li>Создание формы ввода для руководителей отделов</li>
+                                    <li>Настройка согласования с директором департамента</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4">
+                                4. Интеграция 1С ЗУП с веб-сервисом
+                            </button>
+                        </h2>
+                        <div id="a4" class="accordion-collapse collapse" data-bs-parent="#actionsAccordion">
+                            <div class="accordion-body">
+                                <ul class="mb-0">
+                                    <li>Разработка кода приёма данных в ЗУП</li>
+                                    <li>Реализация загрузки данных в регистры ЗУП</li>
+                                    <li>Формирование отчёта для руководителей и директоров</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5">
+                                5. Тестирование и доработка обмена
+                            </button>
+                        </h2>
+                        <div id="a5" class="accordion-collapse collapse" data-bs-parent="#actionsAccordion">
+                            <div class="accordion-body">
+                                <ul class="mb-0">
+                                    <li>Написание тестовых сценариев (аналитики)</li>
+                                    <li>Проведение тестов и исправление ошибок (разработчики)</li>
+                                    <li>Проверка корректности расчётов в ЗУП</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6">
+                                6. Документирование и обучение пользователей
+                            </button>
+                        </h2>
+                        <div id="a6" class="accordion-collapse collapse" data-bs-parent="#actionsAccordion">
+                            <div class="accordion-body">
+                                <ul class="mb-0">
+                                    <li>Создание технической документации (разработчики)</li>
+                                    <li>Подготовка пользовательских инструкций (аналитики)</li>
+                                    <li>Проведение тренингов для руководителей и директоров</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <h2 class="h4 fw-bold section-title mb-4">Уровень 3: Задачи исполнителей</h2>
+                <div class="row g-3">
+
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-3">1. Анализ бизнес-процесса и требований</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-warning mb-2">Аналитик</span>
+                                                <ul class="mb-0">
+                                                    <li>Провести интервью с руководителями отделов и директорами департамента</li>
+                                                    <li>Создать BPMN-модель процесса согласования и передачи данных</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-primary mb-2">Разработчик</span>
+                                                <ul class="mb-0">
+                                                    <li>Проанализировать текущие конфигурации Документооборот и ЗУП на возможность расширения</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-3">2. Разработка веб-сервиса для обмена данными</h3>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <div class="card bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-primary mb-2">Разработчик</span>
+                                                <ul class="mb-0">
+                                                    <li>Выбрать архитектуру веб-сервиса (REST vs SOAP) и оформить техническое решение</li>
+                                                    <li>Реализовать метод PostData() для приёма данных из Документооборота</li>
+                                                    <li>Реализовать метод GetData() для передачи данных в ЗУП</li>
+                                                    <li>Настроить JWT-аутентификацию и логирование запросов</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-warning mb-2">Аналитик</span>
+                                                <ul class="mb-0">
+                                                    <li>Определить требования к безопасности и логированию</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-3">3. Интеграция 1С Документооборот с веб-сервисом</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-primary mb-2">Разработчик</span>
+                                                <ul class="mb-0">
+                                                    <li>Создать HTTP-обработчик в Документообороте для отправки данных</li>
+                                                    <li>Реализовать форму ввода данных для руководителя отдела</li>
+                                                    <li>Настроить событие «На согласование» для передачи директору</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-warning mb-2">Аналитик</span>
+                                                <ul class="mb-0">
+                                                    <li>Определить правила согласования и маршрут документооборота к директору департамента</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-3">4. Интеграция 1С ЗУП с веб-сервисом</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-primary mb-2">Разработчик</span>
+                                                <ul class="mb-0">
+                                                    <li>Создать HTTP-обработчик в ЗУП для приёма данных</li>
+                                                    <li>Реализовать загрузку данных в регистры ЗУП</li>
+                                                    <li>Создать отчёт в ЗУП с фактическими данными расчёта</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-warning mb-2">Аналитик</span>
+                                                <ul class="mb-0">
+                                                    <li>Оформить спецификацию отчёта для руководителей и директоров</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-3">5. Тестирование и доработка обмена</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-warning mb-2">Аналитик</span>
+                                                <ul class="mb-0">
+                                                    <li>Написать тестовые сценарии (входные данные, ожидаемый результат)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-primary mb-2">Разработчик</span>
+                                                <ul class="mb-0">
+                                                    <li>Провести модульное тестирование веб-сервиса</li>
+                                                    <li>Провести интеграционное тестирование</li>
+                                                    <li>Исправить ошибки обмена</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-secondary mb-2">Контроль качества</span>
+                                                <ul class="mb-0">
+                                                    <li>Проверка корректности расчётов в ЗУП</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h3 class="h5 fw-bold mb-3">6. Документирование и обучение пользователей</h3>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-primary mb-2">Разработчик</span>
+                                                <ul class="mb-0">
+                                                    <li>Создать техническую документацию по веб-сервису</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card h-100 bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-warning mb-2">Аналитик</span>
+                                                <ul class="mb-0">
+                                                    <li>Подготовить пользовательскую инструкцию для руководителей отделов</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card bg-light border-0">
+                                            <div class="card-body">
+                                                <span class="badge text-bg-success mb-2">Обучение</span>
+                                                <ul class="mb-0">
+                                                    <li>Проведение тренингов для руководителей и директоров</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body p-4">
+                <h2 class="h4 fw-bold section-title mb-4">Иерархическое дерево проекта</h2>
+                <div class="tree-wrap">
+                    <ul class="tree">
+                        <li>
+                            <span>Проект интеграции «1С Документооборот ↔ 1С ЗУП»</span>
+                            <ul>
+                                <li><span>1. Анализ бизнес-процесса и требований</span>
+                                    <ul>
+                                        <li>
+                                            <span>1.1 Аналитик</span>
+                                            <ul>
+                                                <li><span>Провести интервью с руководителями отделов и директорами департамента</span></li>
+                                                <li><span>Создать BPMN-модель процесса согласования и передачи данных</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>1.2 Разработчик</span>
+                                            <ul>
+                                                <li><span>Проанализировать текущие конфигурации Документооборот и ЗУП на возможность расширения</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>2. Разработка веб-сервиса для обмена данными</span>
+                                    <ul>
+                                        <li>
+                                            <span>2.1 Разработчик</span>
+                                            <ul>
+                                                <li><span>Выбрать архитектуру веб-сервиса (REST vs SOAP) и оформить техническое решение</span></li>
+                                                <li><span>Реализовать метод PostData() для приёма данных из Документооборота</span></li>
+                                                <li><span>Реализовать метод GetData() для передачи данных в ЗУП</span></li>
+                                                <li><span>Настроить JWT-аутентификацию и логирование запросов</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>2.2 Аналитик</span>
+                                            <ul>
+                                                <li><span>Определить требования к безопасности и логированию</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>3. Интеграция 1С Документооборот с веб-сервисом</span>
+                                    <ul>
+                                        <li>
+                                            <span>3.1 Разработчик</span>
+                                            <ul>
+                                                <li><span>Создать HTTP-обработчик в Документообороте для отправки данных</span></li>
+                                                <li><span>Реализовать форму ввода данных для руководителя отдела</span></li>
+                                                <li><span>Настроить событие «На согласование» для передачи директору</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>3.2 Аналитик</span>
+                                            <ul>
+                                                <li><span>Определить правила согласования и маршрут документооборота к директору департамента</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>4. Интеграция 1С ЗУП с веб-сервисом</span>
+                                    <ul>
+                                        <li>
+                                            <span>4.1 Разработчик</span>
+                                            <ul>
+                                                <li><span>Создать HTTP-обработчик в ЗУП для приёма данных</span></li>
+                                                <li><span>Реализовать загрузку данных в регистры ЗУП</span></li>
+                                                <li><span>Создать отчёт в ЗУП с фактическими данными расчёта</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>4.2 Аналитик</span>
+                                            <ul>
+                                                <li><span>Оформить спецификацию отчёта для руководителей и директоров</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>5. Тестирование и доработка обмена</span>
+                                    <ul>
+                                        <li>
+                                            <span>5.1 Аналитик</span>
+                                            <ul>
+                                                <li><span>Написать тестовые сценарии (входные данные, ожидаемый результат)</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>5.2 Разработчик</span>
+                                            <ul>
+                                                <li><span>Провести модульное тестирование веб-сервиса</span></li>
+                                                <li><span>Провести интеграционное тестирование</span></li>
+                                                <li><span>Исправить ошибки обмена</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>5.3 Контроль качества</span>
+                                            <ul>
+                                                <li><span>Проверка корректности расчётов в ЗУП</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>6. Документирование и обучение пользователей</span>
+                                    <ul>
+                                        <li>
+                                            <span>6.1 Разработчик</span>
+                                            <ul>
+                                                <li><span>Создать техническую документацию по веб-сервису</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>6.2 Аналитик</span>
+                                            <ul>
+                                                <li><span>Подготовить пользовательскую инструкцию для руководителей отделов</span></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span>6.3 Обучение</span>
+                                            <ul>
+                                                <li><span>Проведение тренингов для руководителей и директоров</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li><span>7. План реализации</span>
+                                    <ul>
+                                        <li><span>7.1 Анализ и проектирование — 2 недели</span></li>
+                                        <li><span>7.2 Разработка веб-сервиса — 3 недели</span></li>
+                                        <li><span>7.3 Интеграция с 1С Документооборот — 4 недели</span></li>
+                                        <li><span>7.4 Интеграция с 1С ЗУП — 4 недели</span></li>
+                                        <li><span>7.5 Тестирование — 2 недели</span></li>
+                                        <li><span>7.6 Запуск и обучение — 1 неделя</span></li>
+                                    </ul>
+                                </li>
+
+                                <li><span>8. Ожидаемые результаты</span>
+                                    <ul>
+                                        <li><span>8.1 Сокращение ручного ввода данных</span></li>
+                                        <li><span>8.2 Ускорение согласования между отделами</span></li>
+                                        <li><span>8.3 Единый источник фактических данных</span></li>
+                                        <li><span>8.4 Удобный отчёт для руководства</span></li>
+                                        <li><span>8.5 Снижение ошибок при передаче информации</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h2 class="h4 fw-bold section-title mb-4">План реализации</h2>
+                <div class="row g-3">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning mb-2">Этап 1</span>
+                                <h3 class="h5 fw-bold">Анализ и проектирование</h3>
+                                <p class="mb-0">2 недели</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning mb-2">Этап 2</span>
+                                <h3 class="h5 fw-bold">Разработка веб-сервиса</h3>
+                                <p class="mb-0">3 недели</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning mb-2">Этап 3</span>
+                                <h3 class="h5 fw-bold">Интеграция с 1С Документооборот</h3>
+                                <p class="mb-0">4 недели</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning mb-2">Этап 4</span>
+                                <h3 class="h5 fw-bold">Интеграция с 1С ЗУП</h3>
+                                <p class="mb-0">4 недели</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning mb-2">Этап 5</span>
+                                <h3 class="h5 fw-bold">Тестирование и доработка</h3>
+                                <p class="mb-0">2 недели</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body">
+                                <span class="badge text-bg-warning mb-2">Этап 6</span>
+                                <h3 class="h5 fw-bold">Документирование и обучение</h3>
+                                <p class="mb-0">1 неделя</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning mt-4 mb-0">
+                    <strong>Общая длительность проекта:</strong> 12 недель
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center py-4 text-secondary">
+            <div class="fs-4 fw-bold text-dark mb-2">Спасибо за внимание!</div>
+            <div>Проект: 1С Документооборот ↔ 1С ЗУП через веб-сервис</div>
+        </footer>
     </div>
-  </nav>
 
-  <main class="presentation">
-    <section id="slide-1" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card app-card-hero shadow-sm overflow-hidden">
-          <div class="hero-topbar"></div>
-          <div class="card-body p-4 p-lg-5 text-center">
-            <div class="mb-3"><span class="badge rounded-pill app-badge">Проект интеграции</span></div>
-            <h1 class="display-6 fw-bold mb-3">ПРОЕКТ ИНТЕГРАЦИИ</h1>
-            <h2 class="h2 fw-bold mb-3">1С Документооборот ↔ 1С ЗУП</h2>
-            <p class="lead text-secondary mb-4">Отправка и получение данных через веб-сервис</p>
-            <p class="mx-auto text-secondary mb-0" style="max-width: 900px;">
-              Цель проекта: автоматизировать передачу данных между 1С Документооборот и 1С ЗУП, чтобы руководители отделов, директоры департаментов, ответственный сотрудник и бухгалтерия работали с едиными и актуальными данными.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-3">
-          <a class="btn app-btn-primary" href="#slide-2">Начать</a>
-          <a class="btn app-btn-secondary" href="#slide-9">К финалу</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-2" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">1. Краткое описание</span>
-            <div class="row g-3">
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Роли</h3>
-                    <ul class="mb-0 app-list-simple">
-                      <li>Руководители отделов вносят данные по сотрудникам.</li>
-                      <li>Директоры департамента собирают и согласуют данные от отделов.</li>
-                      <li>Ответственный сотрудник загружает данные в 1С ЗУП.</li>
-                      <li>Бухгалтерия использует данные для расчётов.</li>
-                      <li>Руководство получает отчёт с фактическими данными.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Смысл</h3>
-                    <p class="text-secondary mb-0">Единые данные, меньше ручных операций и меньше ошибок при передаче между системами.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-3">Далее</a>
-              <a class="btn app-btn-secondary" href="#slide-1">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-3" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">2. Бизнес-процесс</span>
-            <ol class="list-group list-group-numbered app-list mb-4">
-              <li class="list-group-item">Руководитель отдела вводит данные по сотруднику в форму 1С Документооборот.</li>
-              <li class="list-group-item">Данные передаются на согласование директору департамента.</li>
-              <li class="list-group-item">Директор департамента собирает информацию от всех подчинённых отделов.</li>
-              <li class="list-group-item">Ответственный сотрудник получает сведения от директоров департаментов.</li>
-              <li class="list-group-item">Ответственный сотрудник заносит данные в 1С ЗУП.</li>
-              <li class="list-group-item">После этого данные передаются в бухгалтерию.</li>
-              <li class="list-group-item">Руководители и директоры могут запросить отчёт с фактическими данными.</li>
-            </ol>
-            <div class="d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-4">Далее</a>
-              <a class="btn app-btn-secondary" href="#slide-2">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-4" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">3. Архитектура решения</span>
-            <p class="lead text-secondary mb-4">Схема обмена: 1С Документооборот → Веб-сервис → 1С ЗУП</p>
-            <div class="row g-3">
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Компоненты</h3>
-                    <ul class="mb-0 app-list-simple">
-                      <li>Веб-сервис принимает и отдаёт данные между конфигурациями.</li>
-                      <li>Аутентификация выполняется через JWT или другой защищённый механизм.</li>
-                      <li>В Документообороте реализуется форма ввода и отправка данных.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Контроль</h3>
-                    <ul class="mb-0 app-list-simple">
-                      <li>В ЗУП реализуется приём данных, загрузка в регистры и отчётность.</li>
-                      <li>Все запросы логируются для контроля и отладки.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-5">Далее</a>
-              <a class="btn app-btn-secondary" href="#slide-3">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-5" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">4. Структура проекта</span>
-            <div class="row g-3">
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Уровень 1</h3>
-                    <ol class="mb-0 app-list-simple">
-                      <li>Анализ бизнес-процесса и требований</li>
-                      <li>Разработка веб-сервиса</li>
-                      <li>Интеграция Документооборота</li>
-                      <li>Интеграция ЗУП</li>
-                      <li>Тестирование и доработка</li>
-                      <li>Документирование и обучение</li>
-                    </ol>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Уровень 2</h3>
-                    <ul class="mb-0 app-list-simple">
-                      <li>Сбор и согласование требований</li>
-                      <li>Проектирование обмена данными</li>
-                      <li>Настройка маршрутов согласования</li>
-                      <li>Проверка качества обмена</li>
-                      <li>Подготовка документации</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-6">Далее</a>
-              <a class="btn app-btn-secondary" href="#slide-4">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-6" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">5. Задачи аналитика и разработчика</span>
-            <div class="row g-3">
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Аналитик</h3>
-                    <ul class="mb-0 app-list-simple">
-                      <li>Собрать требования от руководителей и директоров.</li>
-                      <li>Описать маршрут согласования.</li>
-                      <li>Подготовить тестовые сценарии.</li>
-                      <li>Сделать пользовательские инструкции.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="card app-mini-card h-100">
-                  <div class="card-body">
-                    <h3 class="h5 fw-bold">Разработчик</h3>
-                    <ul class="mb-0 app-list-simple">
-                      <li>Реализовать веб-сервис.</li>
-                      <li>Создать HTTP-обработчики.</li>
-                      <li>Настроить передачу и приём данных.</li>
-                      <li>Сделать отчёт в 1С ЗУП.</li>
-                      <li>Провести интеграционное тестирование.</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-7">Далее</a>
-              <a class="btn app-btn-secondary" href="#slide-5">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-7" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">6. План реализации</span>
-            <div class="row g-3">
-              <div class="col-md-6 col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 1</h3><p class="text-secondary mb-0">Анализ и проектирование: 2 недели.</p></div></div></div>
-              <div class="col-md-6 col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 2</h3><p class="text-secondary mb-0">Разработка веб-сервиса: 3 недели.</p></div></div></div>
-              <div class="col-md-6 col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 3</h3><p class="text-secondary mb-0">Интеграция с 1С: 4 недели.</p></div></div></div>
-              <div class="col-md-6 col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 4</h3><p class="text-secondary mb-0">Тестирование: 2 недели.</p></div></div></div>
-              <div class="col-md-6 col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Этап 5</h3><p class="text-secondary mb-0">Запуск и обучение: 1 неделя.</p></div></div></div>
-            </div>
-            <div class="mt-4"><div class="alert alert-info mb-0 app-alert">Общая длительность проекта: 12 недель.</div></div>
-            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-8">Далее</a>
-              <a class="btn app-btn-secondary" href="#slide-6">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-8" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card shadow-sm">
-          <div class="card-body p-4 p-lg-5">
-            <span class="badge rounded-pill app-badge mb-3">7. Ожидаемые результаты</span>
-            <div class="row g-3">
-              <div class="col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 1</h3><p class="text-secondary mb-0">Сокращение ручного ввода данных.</p></div></div></div>
-              <div class="col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 2</h3><p class="text-secondary mb-0">Ускорение согласования между отделами.</p></div></div></div>
-              <div class="col-lg-4"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 3</h3><p class="text-secondary mb-0">Единый источник фактических данных.</p></div></div></div>
-              <div class="col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 4</h3><p class="text-secondary mb-0">Удобный отчёт для руководства.</p></div></div></div>
-              <div class="col-lg-6"><div class="card app-mini-card h-100"><div class="card-body"><h3 class="h5 fw-bold">Эффект 5</h3><p class="text-secondary mb-0">Снижение ошибок при передаче информации.</p></div></div></div>
-            </div>
-            <div class="mt-4 d-flex gap-3 flex-column flex-md-row">
-              <a class="btn app-btn-primary" href="#slide-9">Финал</a>
-              <a class="btn app-btn-secondary" href="#slide-7">Назад</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="slide-9" class="slide py-3">
-      <div class="container h-100 d-flex flex-column justify-content-center">
-        <div class="card app-card app-card-hero shadow-sm overflow-hidden text-center">
-          <div class="hero-topbar"></div>
-          <div class="card-body p-4 p-lg-5">
-            <h2 class="display-6 fw-bold mb-3">Спасибо за внимание!</h2>
-            <p class="text-secondary mb-2">Проект: 1С Документооборот ↔ 1С ЗУП через веб-сервис.</p>
-            <p class="text-secondary mb-0">Подходит для показа руководству и команде разработки.</p>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-3 mt-3">
-          <a class="btn app-btn-secondary" href="#slide-8">Назад</a>
-          <a class="btn app-btn-primary" href="#slide-1">В начало</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
